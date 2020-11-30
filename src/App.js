@@ -12,10 +12,12 @@ class App extends React.Component
         monsters:[],
         searchField: ''
     };
+    console.log('Testing');
     this.handleChange=this.handleChange.bind(this);
   }
 
   componentDidMount() {
+    console.log(this.props)
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(users => this.setState({monsters:users}));
